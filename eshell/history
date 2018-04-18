@@ -1,0 +1,128 @@
+cd DIKU/
+cd comsys-A3/
+ls
+./login.sh
+q
+quit
+bash
+ls
+cd
+ls
+cd Downloads/
+ls
+cd 
+cd
+cd Documents/
+ls
+cd DIKU/
+ls
+cd comsys-A3/
+ls
+cd Mount/
+ls
+cd compSys-e2017-sim/
+ls
+cd architecture-tools/
+ls
+gdb -tui ano.c
+gdb -tui
+gdb -tui
+cd
+cd Documents/
+ls
+emacs d.c
+cd Documents/DIKU/comsys-A3/Mount/
+ls
+cd compSys-e2017-sim/
+ls
+ls
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+cd ..
+cd
+ls
+cd Documents/
+ls
+cd DIKU/Virtual\ machine/
+ls
+cd Mount/
+ls
+cd A3/
+ls
+cd examples/
+ls
+ls
+cd ..
+ls
+ls
+cat > make_matrics.sh
+ls
+ls
+cd arc
+ls
+ls
+cd ..
+ls
+cd examples
+ls
+ls
+man sed
+man sed
+ls
+cd ..
+l
+ls
+make
+ls
+cd 
+ls
+cd Dropbox/
+ls
+cd Project\ Euler/
+ls
+stack HelloWorld.hs 
+stack HelloWorld.hs 
+stack HelloWorld.hs 
+ls
+ls
+stack exec -- runghc HelloWorld.hs 
+ghci
+shell
+$HELL
+$SHELL
+echo $SHELL
+echo $PATH
+echo $SHELL
+ls
+cd Dropbox/ProjectEuler/
+ls
+ghc problem1.hs
+ls
+cd Dropbox/ProjectEuler/
+ls
+ghc problem1.hs 
+ls
+cd 
+ls
+cd Documents/DIKU/
+ls
+cd Done/
+ls
+cd PLD/
+ls
+cd ReVeR/
+ls
+make
+ls
+cd Dropbox/ProjectEuler/
+ls
+ghc problem1.hs
+echo $SHELL
+shell
+echo $TERM
+echo $TERM
+echo $TERM
