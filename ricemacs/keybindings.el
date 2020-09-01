@@ -23,7 +23,7 @@
    "K"     'kill-this-buffer
    "TAB"   'switch-to-previous-buffer
    "t"     'neotree-toggle
-   "+"     'text-scale-increa
+   "+"     'text-scale-increase
    "-"     'text-scale-decrease
    "R"     'query-replace
    "j"     'ace-jump-mode
