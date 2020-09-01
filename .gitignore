@@ -5,8 +5,7 @@ evil/
 smex-items
 network-security.data
 init.log
-init.el~
-custom.el~
+*.el~
 ido.last
 ido.last~
 ac-comphist.dat
