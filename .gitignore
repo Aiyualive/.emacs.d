@@ -2,3 +2,15 @@
 eshell/
 elpa/
 evil/
+smex-items
+network-security.data
+init.log
+init.el~
+custom.el~
+ido.last
+ido.last~
+ac-comphist.dat
+.mc-lists.el
+.last-package-update-day
+auto-save-list/
+backup/
