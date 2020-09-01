@@ -1,0 +1,27 @@
+def partition(a, p, r):
+    x = a[r]
+    i = p - 1
+
+    for j in range(p, r):
+        if a[j] <= x:
+            i += 1
+            tmp1 = a[i]
+            a[i] = a[j]
+            a[j] = tmp1
+
+    tmp2 = a[i+1]
+    a[i+1] = a[r]
+    a[r] = tmp2
+    return (i + 1)
+
+def qck_srt(a, p, r):
+    if p < r:
+        q = partition(a, p, r)
+        qck_srt(a, p, q-1)
+        qck_srt(a, q+1, r)
+
+import random as rnd
+
+x= [(rnd.randint(0, rnd_max)) for i in range(10**5)]
+
+qck_srt(x, 0, len(x)-1)

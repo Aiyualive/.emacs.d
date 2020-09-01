@@ -1,0 +1,53 @@
+#!/usr/bin/bash
+
+echo "Runtime for insertion sort..."
+
+for i in 10 100 1000 10000 100000 1000000 10000000 100000000 200000000
+do
+    start=$(gdate +%s.%N)
+    python3 ins_srt.py $i
+    end=$(gdate +%s.%N)
+    diff=$(python -c "print(${end} - ${start})")
+    echo "$i: $diff"
+done
+
+
+echo "Runtime for shell sort..."
+for i in 10 100 1000 10000 100000 1000000 10000000 100000000 200000000
+do
+    start=$(gdate +%s.%N)
+    python3 shell_srt.py $i
+    end=$(gdate +%s.%N)
+    diff=$(python -c "print(${end} - ${start})")
+    echo "$i: $diff"
+done
+
+echo "Runtime for quick sort..."
+for i in 10 100 1000 10000 100000 1000000 10000000 100000000 200000000
+do
+    start=$(gdate +%s.%N)
+    python3 qck_srt.py $i
+    end=$(gdate +%s.%N)
+    diff=$(python -c "print(${end} - ${start})")
+    echo "$i: $diff"
+done
+
+echo "Runtime for merge sort..."
+for i in 10 100 1000 10000 100000 1000000 10000000 100000000 200000000
+do
+    start=$(gdate +%s.%N)
+    python3 mrg_srt.py $i
+    end=$(gdate +%s.%N)
+    diff=$(python -c "print(${end} - ${start})")
+    echo "$i: $diff"
+done
+
+echo "Runtime for radix sort..."
+for i in 10 100 1000 10000 100000 1000000 10000000 100000000 200000000
+do
+    start=$(gdate +%s.%N)
+    python3 rdx_srt.py $i
+    end=$(gdate +%s.%N)
+    diff=$(python -c "print(${end} - ${start})")
+    echo "$i: $diff"
+done

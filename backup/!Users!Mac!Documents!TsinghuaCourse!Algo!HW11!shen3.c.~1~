@@ -1,0 +1,151 @@
+/Users/Mac/.zshrc:33: no such file or directory: /kaggle.json
+%
+ 米力  21:03:48 ...TsinghuaCourse/Algo/HW11 
+$  cc problem3
+clang: error: no such file or directory: 'problem3'
+clang: error: no input files
+%
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+$ ls
+KULogo.pdf        imgs              master.log        master.synctex.gz ~$graphing.xlsx
+THU.png           master (1).pdf    master.out        master.tex
+Tex               master.aux        master.pdf        subtex
+%
+ 米力  21:34:11 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  21:34:27 ...TsinghuaCourse/Algo/HW11 
+$ls
+KULogo.pdf        imgs              master.log        master.synctex.gz subtex
+THU.png           master (1).pdf    master.out        master.tex        ~$graphing.xlsx
+Tex               master.aux        master.pdf        problem3.c
+
+ 米力  21:34:37 ...TsinghuaCourse/Algo/HW11 
+$ cc problem3
+clang: error: no such file or directory: 'problem3'
+clang: error: no input files
+
+ 米力  ✘  21:34:41 ...TsinghuaCourse/Algo/HW11 
+$ l
+total 2632
+drwxr-xr-x@ 20 Mac  staff   640B Jan 17 21:34 .
+lrwxr-xr-x   1 Mac  staff    32B Jan 17 21:34 .#problem3.c -> Mac@Macs-MacBook-Air.local.32277
+lrwxr-xr-x   1 Mac  staff    32B Oct 17 12:18 .#time.sh -> Mac@Macs-MacBook-Air.local.20531
+drwxr-xr-x@ 23 Mac  staff   736B Jan 15 00:52 ..
+-rw-r--r--@  1 Mac  staff    10K Jan 15 00:52 .DS_Store
+drwxr-xr-x@  8 Mac  staff   256B Oct 31 17:22 .ipynb_checkpoints
+-rw-r--r--@  1 Mac  staff    57K Oct 25  2017 KULogo.pdf
+-rw-r--r--@  1 Mac  staff   336K Sep 29 17:36 THU.png
+-rwxr-xr-x@  1 Mac  staff   118B Oct 25  2017 Tex
+drwxr-xr-x@  3 Mac  staff    96B Nov  8 09:50 imgs
+-rw-r--r--@  1 Mac  staff   370K Nov 29 23:56 master (1).pdf
+-rw-r--r--@  1 Mac  staff   899B Jan 17 20:51 master.aux
+-rw-r--r--@  1 Mac  staff    84K Jan 17 20:51 master.log
+-rw-r--r--@  1 Mac  staff     0B Jan 17 20:51 master.out
+-rw-r--r--@  1 Mac  staff   359K Jan 17 20:51 master.pdf
+-rw-r--r--   1 Mac  staff   3.8K Jan 17 20:51 master.synctex.gz
+-rw-r--r--@  1 Mac  staff   621B Nov 15 13:01 master.tex
+-rw-r--r--   1 Mac  staff   605B Jan 17 21:34 problem3.c
+drwxr-xr-x@ 22 Mac  staff   704B Jan 17 20:51 subtex
+-rw-r--r--@  1 Mac  staff   165B Oct 18 15:42 ~$graphing.xlsx
+
+ 米力  21:34:42 ...TsinghuaCourse/Algo/HW11 
+$ ls
+KULogo.pdf        imgs              master.log        master.synctex.gz subtex
+THU.png           master (1).pdf    master.out        master.tex        ~$graphing.xlsx
+Tex               master.aux        master.pdf        problem3.c
+
+ 米力  21:34:43 ...TsinghuaCourse/Algo/HW11 
+$ cc problem3.c
+problem3.c:1:1: error: expected identifier or '('
+/Users/Mac/.zshrc:33: no such file or directory: /kaggle.json
+^
+problem3.c:3:9: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:03:48 ...TsinghuaCourse/Algo/HW11 
+      ^~
+problem3.c:3:50: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:03:48 ...TsinghuaCourse/Algo/HW11 
+                                             ^
+problem3.c:8:9: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+      ^~
+problem3.c:8:13: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+        ^~
+problem3.c:8:17: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+          ^~
+problem3.c:8:58: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+                                                 ^
+problem3.c:14:9: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:34:11 ...TsinghuaCourse/Algo/HW11 
+      ^~
+problem3.c:14:50: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:34:11 ...TsinghuaCourse/Algo/HW11 
+                                             ^
+problem3.c:16:9: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:34:27 ...TsinghuaCourse/Algo/HW11 
+      ^~
+problem3.c:16:50: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:34:27 ...TsinghuaCourse/Algo/HW11 
+                                             ^
+11 errors generated.
+
+ 米力  ✘  21:34:52 ...TsinghuaCourse/Algo/HW11 
+$
+
+ 米力  ✘  21:37:01 ...TsinghuaCourse/Algo/HW11 
+$ cc problem3.c
+problem3.c:1:1: error: expected identifier or '('
+/Users/Mac/.zshrc:33: no such file or directory: /kaggle.json
+^
+problem3.c:3:9: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:03:48 ...TsinghuaCourse/Algo/HW11 
+      ^~
+problem3.c:3:50: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:03:48 ...TsinghuaCourse/Algo/HW11 
+                                             ^
+problem3.c:8:9: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+      ^~
+problem3.c:8:13: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+        ^~
+problem3.c:8:17: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+          ^~
+problem3.c:8:58: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  ✘  21:34:05 ...TsinghuaCourse/Algo/HW11 
+                                                 ^
+problem3.c:14:9: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:34:11 ...TsinghuaCourse/Algo/HW11 
+      ^~
+problem3.c:14:50: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:34:11 ...TsinghuaCourse/Algo/HW11 
+                                             ^
+problem3.c:16:9: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:34:27 ...TsinghuaCourse/Algo/HW11 
+      ^~
+problem3.c:16:50: error: non-ASCII characters are not allowed outside of literals and identifiers
+ 米力  21:34:27 ...TsinghuaCourse/Algo/HW11 
+                                             ^
+11 errors generated.
+%
+ 米力  ✘  21:37:05 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  ✘  21:45:37 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  ✘  21:46:28 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  ✘  21:46:45 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  ✘  21:47:26 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  ✘  21:48:09 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  ✘  21:48:20 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  ✘  21:48:29 ...TsinghuaCourse/Algo/HW11 
+
+ 米力  ✘  21:48:36 ...TsinghuaCourse/Algo/HW11 
+$   w

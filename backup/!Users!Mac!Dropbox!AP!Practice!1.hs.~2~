@@ -1,0 +1,11 @@
+data Exp =
+    Cst Integer
+  | Add Exp Exp
+  | Sub Exp Exp
+  | Mul Exp Exp
+  | Div Exp Exp
+  | Pow Exp Exp
+
+
+main = do
+    print 2

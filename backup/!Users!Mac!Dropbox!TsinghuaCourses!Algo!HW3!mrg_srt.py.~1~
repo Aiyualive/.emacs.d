@@ -1,0 +1,43 @@
+import sys
+import random as rnd
+rnd_max = (2**32)-1
+rnd.seed(0)
+
+def mrg_srt(a):
+    n = len(a)
+    if n > 1:
+        mid = int(n/2)
+        left  = a[:mid]
+        right = a[mid:]
+
+        mrg_srt(left)
+        mrg_srt(right)
+
+        i = 0
+        j = 0
+        k = 0
+
+        l_left, l_right = len(left), len(right)
+        while i < l_left and j < l_right:
+            if left[i] < right[j]:
+                a[k]=left[i]
+                i += 1
+            else:
+                a[k]=right[j]
+                j +=1
+            k += 1
+        while j < l_right:
+            a[k]=right[j]
+            j += 1
+            k += 1
+
+        while i < l_left:
+            a[k]=left[i]
+            i += 1
+            k += 1
+
+
+n = int(sys.argv[1])
+a = [(rnd.randint(0, rnd_max)) for i in range(n)]
+
+shell_srt(a)

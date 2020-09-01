@@ -146,3 +146,22 @@
 ;(evil-define-key 'normal magit-diff-mode-map
 ;    "j" 'magit-goto-next-section
 ;    "k" 'magit-goto-previous-section)
+
+
+;; Do not make backups
+;(setq make-backup-files nil)
+
+;; Backup folder for ~ files
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+  backup-by-copying t    ; Don't delink hardlinks
+  version-control t      ; Use version numbers on backups
+  delete-old-versions t  ; Automatically delete excess backups
+  kept-new-versions 20   ; how many of the newest versions to keep
+  kept-old-versions 5    ; and how many of the old
+  )
+
+;; Display Chinese characters
+(setq-default buffer-file-coding-system 'chinese-gbk-mac)
+(setq-default default-buffer-file-coding-system 'chinese-gbk-mac)
+(set-default-coding-systems 'chinese-gbk-mac)
+(prefer-coding-system 'chinese-gbk-mac)

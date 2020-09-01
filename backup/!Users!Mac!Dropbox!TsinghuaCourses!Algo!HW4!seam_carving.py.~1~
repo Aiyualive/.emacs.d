@@ -1,0 +1,116 @@
+import numpy as np
+from skimage import io
+from skimage import color
+import os
+from scipy.ndimage.filters import gaussian_filter
+import matplotlib.pyplot as plt
+from matplotlib import cm
+from scipy.ndimage import rotate
+
+
+#Energy value, d, is defined to be gradient magnitude
+def compute_d(img):
+    grey    = color.rgb2gray(img) #greyscale
+    blur    = gaussian_filter(grey, sigma=3) #blur
+    grads   = np.asarray(np.gradient(blur)) # gradients
+    grad_m  = np.sqrt(grads[0]**2+grads[1]**2) #gradient magnitude
+    return grad_m
+
+def find_seams_and_dp(d):
+    # d is energy
+    (m,n)    = d.shape[:2]
+    dp       = np.zeros((m, n))
+    seams    = np.zeros((m, n))
+    dp[-1:]  = d[-1:] #base value from bottom
+
+    #Helper function to find the min neighbor for the next row
+    def find_min_and_idx(i, j):
+        dp_min = 1000000 #init min
+        if 0 == j:
+            ks = [0, 1]
+        elif j == n-1:
+            ks = [-1, 0]
+        else:
+            ks = [-1,0,1]
+
+        idx = -2 #init idx
+        for k in ks:
+            nxt = dp[i + 1, j + k]
+            if dp_min > nxt:
+                dp_min = nxt
+                idx    = j + k
+
+        return dp_min, idx
+
+    #Bottom up recursion
+    for i in range(m - 2, -1, -1):
+        for j in range(0, n):
+            dp_min, idx = find_min_and_idx(i,j)
+            seams[i,j]  = idx
+            dp[i,j]     = d[i,j] + dp_min
+
+    return seams, dp
+
+def remove_seam_vert(img, seam):
+    m = len(seam)
+
+    res = [np.delete(img[i], seam[i], axis=0) for i in range(m)]
+
+    return np.array(res)
+
+def find_min_seam(seams, dp):
+    m = dp.shape[0]
+    seam = np.zeros(m)
+    #The minimum seam
+    del_idx = np.argmin(dp[0,:])
+
+    #Creating the seam by going through the recorded indexes in seam_val
+    for i in range(m):
+        seam[i] = del_idx
+        del_idx = int(seams[i, del_idx])
+
+    return seam
+
+def seam_carving(img):
+    m, n = img.shape[:2]
+
+    m2 = int(m/2)
+    n2 = int(n/2)
+
+    print("Removing vertical")
+    while ( n > n2 ):
+        d = compute_d(img)
+        seams, dp = find_seams_and_dp(d)
+        seam = find_min_seam(seams, dp)
+        img = remove_seam_vert(img, seam)
+        n = n - 1
+
+    print("Removing horizontal")
+    img = rotate(img, 90)
+    while ( m > m2 ):
+        d = compute_d(img)
+        seams, dp = find_seams_and_dp(d)
+        seam = find_min_seam(seams, dp)
+        img = remove_seam_v(img, seam)
+        m = m - 1
+
+    img = rotate(img, 270)
+
+    return img
+
+img_name = input("Input the name of the image file: ")
+
+img_path     = os.path.join(os.getcwd(), img_name)
+img          = io.imread(img_path)
+
+print()
+plt.imshow(tower)
+plt.title("Before resizing")
+plt.show()
+
+resized = seam_carving(tower)
+plt.imshow(resized)
+plt.show()
+
+
+img = sys.argv[1]

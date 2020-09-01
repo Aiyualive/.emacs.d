@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+echo "Runtime for radix sort..."
+for i in 10 100 1000 10000 100000 1000000 10000000 100000000 200000000
+do
+    start=$(gdate +%s.%N)
+    python3 rdx_srt.py $i
+    end=$(gdate +%s.%N)
+    diff=$(python -c "print(${end} - ${start})")
+    echo "$i: $diff"
+done

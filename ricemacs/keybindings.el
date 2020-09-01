@@ -1,6 +1,7 @@
 (require 'general)
 (require 'multiple-cursors)
-(require 'fsharp-mode)
+;;(require 'fsharp-mode)
+(require 'csharp-mode)
 (require 'expand-region)
 
 ;; Spacemacs-like keybindings
@@ -22,7 +23,7 @@
    "K"     'kill-this-buffer
    "TAB"   'switch-to-previous-buffer
    "t"     'neotree-toggle
-   "+"     'text-scale-increase
+   "+"     'text-scale-increa
    "-"     'text-scale-decrease
    "R"     'query-replace
    "j"     'ace-jump-mode
@@ -74,12 +75,15 @@
    (setq dumb-jump-selector 'ivy)
  :ensure)
 
+;; M key is ALT
 (add-to-list 'term-bind-key-alist '("C-c C-d" . term-interrupt))
 (global-set-key (kbd "C-c C-v") 'term-paste)
 
 (global-set-key (kbd "M-ø") 'move-line-down)
 (global-set-key (kbd "M-å") 'move-line-up)
 
+;; Multiple cursors
+; get out of multiple cursors by pressing return
 (global-set-key (kbd "M-j") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-k") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
@@ -102,5 +106,9 @@
 
 ;; Exit out of insert mode with ee
 (evil-escape-mode 1)
-(setq evil-escape-key-sequence "ee")
+(setq evil-escape-key-sequence "eee")
 (setq-default evil-escape-delay 0.2)
+
+; For haskell compilation
+;(eval-after-load "haskell-mode"
+;    '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
